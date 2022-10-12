@@ -8,6 +8,9 @@ If all goes well the project should be up and running on ```0.0.0.0:8000```
 
 #### Making requests
 Note: API limits days to a maximum of 14 days in the tier currently consumed by this API
+
+You can try out the API endpoints with swagger editor which is running on on the homepage.
+
 You can make requests using CURL on the terminal using the command below replacing location and day with your preference of course:
 ```
 curl --request GET \
