@@ -1,0 +1,23 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    env_file:
+      - envs/.dev # dev secrets are available but prod secrests will not be tracked by VCS
+
+  web:
+    build: .
+    command: python manage.py runserver
+    volumes:
+      - .:/code
+
+    env_file:
+      - envs/.dev
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+volumes:
+  dbdata:
