@@ -80,7 +80,7 @@ DATABASES = {
         "NAME": env("POSTGRES_DB"),
         "USER": env("POSTGRES_USER"),
         "PASSWORD": env("POSTGRES_PASSWORD"),
-        "HOST": "db",
+        "HOST": env("POSTGRES_HOST"),
         "PORT": "5432",
     }
 }
