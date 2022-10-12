@@ -28,7 +28,7 @@ class WeatherAPITest(TestCase):
             reverse("weather_api", kwargs={"location": "nairobi", "days": 15})
         )
         self.assertEqual(response.status_code, 400)
-        self.assertEqual(response.data["error"], "Error: list index out of range")
+        self.assertEqual(response.data, "Error: list index out of range")
 
     def test_get_weather_with_invalid_location_and_days(self):
         response = self.client.get(
@@ -49,7 +49,7 @@ class WeatherAPITest(TestCase):
             reverse("weather_api", kwargs={"location": "nairobi", "days": 30})
         )
         self.assertEqual(response.status_code, 400)
-        self.assertEqual(response.data["error"], "Something went wrong")
+        self.assertEqual(response.data, "Error: list index out of range")
 
     def test_get_weather_with_invalid_location_and_invalid_days(self):
         response = self.client.get(
