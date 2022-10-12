@@ -1,4 +1,10 @@
 from django.urls import path
 from .views import WeatherAPIMainView
 
-urlpatterns = [path("weather/", WeatherAPIMainView.as_view(), name="main-api-view")]
+urlpatterns = [
+    path(
+        "locations/<str:location>/days=<int:days>/",
+        WeatherAPIMainView.as_view(),
+        name="weather_api",
+    ),
+]
