@@ -1,8 +1,8 @@
 #### Set Up
 Ensure you have docker and docker-compose installed
 
-Clone the repository `````
-Switch to repository ```sudo cd weatherAPI```
+Clone the repository ```git clone clone https://github.com/simatei/weatherAPI.git```
+Switch to repository ```cd weatherAPI```
 Startup the project with ```sudo docker-compose up --build```
 If all goes well the project should be up and running on ```0.0.0.0:8000```
 
