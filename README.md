@@ -8,10 +8,10 @@ If all goes well the project should be up and running on ```0.0.0.0:8000```
 
 #### Making requests
 Note: API limits days to a maximum of 14 days in the tier currently consumed by this API
-You can make requests using CURL on the terminal using the command below replacing location and day with your preference:
+You can make requests using CURL on the terminal using the command below replacing location and day with your preference of course:
 ```
 curl --request GET \
-  --url http://0.0.0.0:8000/api/locations/<location>/<days>=1
+  --url http://0.0.0.0:8000/api/locations/<location>/days=<days>
 
 ```
 You can also use an API client(Postman, Insomnia etc) by sending a GET request to ```http://0.0.0.0:8000/api/locations/<location>/days=<days>```
